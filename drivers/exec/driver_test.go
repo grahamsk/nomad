@@ -285,7 +285,7 @@ func TestExecDriver_NoOrphans(t *testing.T) {
 	defer harness.Kill()
 
 	config := &Config{
-		NoPivotRoot:    true,
+		NoPivotRoot:    false,
 		DefaultModePID: executor.IsoModePrivate,
 		DefaultModeIPC: executor.IsoModePrivate,
 	}
