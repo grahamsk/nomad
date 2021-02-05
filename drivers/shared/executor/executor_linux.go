@@ -563,9 +563,7 @@ func supportedCaps() []string {
 }
 
 func configureNamespaces(pidMode, ipcMode string) lconfigs.Namespaces {
-	namespaces := lconfigs.Namespaces{
-		{Type: lconfigs.NEWNS},
-	}
+	namespaces := lconfigs.Namespaces{{Type: lconfigs.NEWNS}}
 	if pidMode == IsoModePrivate {
 		namespaces = append(namespaces, lconfigs.Namespace{Type: lconfigs.NEWPID})
 	}
